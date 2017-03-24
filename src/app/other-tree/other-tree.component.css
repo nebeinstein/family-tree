@@ -1,0 +1,196 @@
+/**
+ * family tree css idea taken from http://thecodeplayer.com/
+ */
+.tree ul,
+.tree ol {
+  white-space: nowrap; /* don't want tree nodes wrapping */
+  position: relative;
+}
+.tree ol {
+  padding: 2em;
+}
+.tree ul > li > a {
+  margin: 1em 1em 0;
+}
+.tree ol > li > a {
+  margin: 0 1em 0;
+}
+.tree div[itemprop=spouse], /* styling for spouse <div itemprop="spouse"> - as we're using microformats */
+.tree li {
+  white-space: normal; /* undo the nowrap we applied earlier */
+  vertical-align: top;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  list-style-type: none;
+  text-align: center;
+  display: inline-block;
+}
+.tree div[itemprop=spouse] > a,
+.tree li > a {
+  background: #fff;
+/*  max-width: 5em;*/
+  padding: 0.5em;
+  /*height: 6em;*/
+  font-size: 0.8em;
+  font-weight: normal;
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+.tree ul > li > a::before,
+.tree ul > li > a::after,
+.tree ol li::before,
+.tree ol li::after {
+  content: '';
+  position: absolute;
+  top: -1em;
+  right: 50%;
+  border-top: 1px solid #ccc;
+  width: 52%;
+  height: 1em;
+}
+.tree ul > li > a::before,
+.tree ul > li > a::after {
+  top: -3.5em;
+  height: 3.5em;
+  z-index: -1;
+}
+
+.tree > ul > li > ol::before,
+.tree > ul > li > ol::after,
+/* top of children list needs only one vertical line */
+.tree ol::before {
+  content: '';
+  position: absolute;
+  right: 50%;
+  width: 60%;
+  height: 1em;
+  border-top: none;
+  border-right: 1px solid #ccc;
+  top: 0;
+}
+
+/* joining main person with siblings to parents */
+.tree > ul > li > ol::before,
+.tree > ul > li > ol::after {
+  border-top: 1px solid #ccc;
+  top: -4em;
+  height: 5em;
+  z-index: -1;
+}
+.tree > ul > li > ol::after {
+  border-right: none;
+  left: 50%;
+}
+
+.tree ol li::after,
+.tree ul > li > a::after {
+  right: auto;
+  left: 50%;
+  border-left: 1px solid #ccc;
+}
+
+div.time-block {
+	display: block;
+}
+
+.tree time {
+  font-size: 0.8em;
+}
+
+.tree div[itemprop=spouse] a::before {
+  content: '';
+  position: absolute;
+  left: -3em;
+  width: 3em;
+  height: 3em;
+  border-bottom: 1px solid #ccc;
+  z-index: -1;
+}
+
+/* pad the person whose spouse is next to them so they line up again */
+.tree li.with-spouse > a {
+  margin-left: 7em;
+}
+
+/* can we squeeze siblings without children showing up a bit, as their children won't overlap */
+tree li:not(.with-spouse):not(:first-child) + li.with-spouse {
+  margin-left: -7em;
+}
+
+/* much bigger lines for main person parents - need a way to automate this, maybe with attr()... */
+.tree > ul > li > ol::before,
+.tree > ul > li > ol::after {
+  width: 12em;
+}
+
+/* bigger lines for grandparents - need a way to automate this, maybe with attr()... */
+.tree > ul > li > ul > li > a::before,
+.tree > ul > li > ul > li > a::after {
+  width: 8em;
+}
+
+/* no lines from top of tree - is there a better way to automate this..? */
+.tree .end-node a::before,
+.tree .end-node a::after {
+  content: none;
+}
+
+/* Remove left connector from first child and right connector from last child */
+.tree ol li:first-child::before {
+  border: none;
+}
+.tree ol li:last-child::after {
+  width: 0;
+}
+
+/* arrow up at top of those with more parents to show */
+.tree li ul li.got-parents > a::before,
+.tree li ul li.got-parents > a::after {
+  top: -28px;
+  bottom: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: '';
+  height: 0;
+  width: 0;
+  position: absolute;
+}
+.tree li ul li.got-parents > a::after {
+  border-bottom-color: #fff;
+  border-width: 16px;
+  margin-left: -16px;
+  z-index: 2;
+}
+.tree li ul li.got-parents > a::before {
+  border-bottom-color: #ccc;
+  border-width: 14px;
+  margin-left: -14px;
+}
+
+/* arrow down at bottom of those with more children to show */
+.tree ol .got-children.end-node > a::before,
+.tree ol .got-children.end-node > a::after {
+  top: 100%;
+  bottom: 28px;
+  left: 50%;
+  border: solid transparent;
+  content: '';
+  height: 0;
+  width: 0;
+  position: absolute;
+}
+.tree ol .got-children.end-node > a::after {
+  border-top-color: #fff;
+  border-width: 14px;
+  margin-left: -14px;
+  z-index: 2;
+}
+.tree ol .got-children.end-node > a::before {
+  border-top-color: #ccc;
+  border-width: 16px;
+  margin-left: -16px;
+}

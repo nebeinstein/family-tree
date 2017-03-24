@@ -1,0 +1,187 @@
+/*td, p, h1, h2, h3, h4, h5, h6, input, textarea {
+	font-family: arial, verdana, helvetica, sans-serif;
+	font-size: 1em;
+	color: #111;
+}
+
+div.gbbs {
+	max-width: 100%;
+	overflow: hidden;
+	opacity: .8;
+	padding-left: 1em;
+	padding-right: 1em;
+	line-height: 1.5em;
+	background-color: #f9f9f9;
+	margin: 1em;
+	border-radius: 15px;
+	border: 1px #ddd solid;
+}
+
+div.gbbs div.gbbs {
+	margin-right: -17px;
+	margin-bottom: -1px;
+	margin-left: 1em;
+	background-image: none;
+	clear: both;
+}
+
+div.gbbs p {
+	margin:1em 0 1em 0;
+}
+
+.gbbs p, .gbbs img, .gbbs .gbbs {
+	opacity: 1;
+}
+
+td, th {
+	vertical-align: top;
+	padding-left: 0;
+}
+
+a {
+	color:#60c;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+a:hover, a.external {
+	text-decoration:underline
+}
+
+.right h2 {
+	margin: 0;
+	background: 0;
+}
+
+.popup a, h4 a, h5 a, h6 a, address a, .right h2 a {
+	font-weight: normal;
+	color: #666;
+}
+
+a:visited {
+	color: 666;
+	text-decoration: none;
+}
+
+h1 a, h2 a, h3 a {
+	color: #111;
+}
+
+table {
+	padding:0;
+}
+
+h1, h2, h3, h4, h5 {
+	margin: 1em;
+	margin-left: 0;
+}
+
+h1 {
+	font-weight: bold;
+}
+
+p {
+	padding: 0;
+	margin: 1em;
+}
+
+h2, h3 {
+	font-size: 1.1em
+}
+
+#pic {
+	border-radius: 10px 10px 0 0;
+	width:100%;
+}
+
+h1, h2 {
+	border-radius: 15px 15px 0 0;
+	background-color: #ded;
+	margin: 0;
+	padding: .5em;
+	padding-left: 1em;
+	background: linear-gradient(#ded,#f9f9f9);
+}
+
+.gbbs h2 {
+	margin: 0 -1em 0 -1em;
+	padding: .5em .5em .5em 1em;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, th a, address a {
+	text-decoration: none;
+}
+
+body {
+	margin: 0;
+}
+
+li li {
+	display: inline;
+}
+
+h2.title, h2.title a, .gr a.l {
+	display: none;
+}
+
+span.gr:hover a.l {
+	display: inline;
+}
+
+[rel=tag], .darts, .public, .vegetarian, .quiz, .pool, .lego, .js, .javascript, .tv, .twitter, .tags .tag {
+	text-decoration: none;
+	padding: 1px;
+	padding-right: 20px;
+	background-repeat: none;
+}
+
+.right [rel=tag] {
+	background: 0;
+}
+
+div.gbbs > ul {
+	list-style: none;
+	text-indent: 0;
+	padding: 0
+}
+
+div.gbbs > ul > li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	padding-left: 20px;
+	background: top left no-repeat
+}
+
+ul.gigography p {
+	display: inline;
+	padding: 0;
+	margin: 0;
+}
+
+.venues {
+	list-style: none;
+	padding: 0;
+	margin: 1em;
+}
+
+.venues li {
+	margin: 1em;
+}
+
+.listings p {
+	display: inline;
+}
+
+code {
+	white-space: pre;
+	margin: 1em 1em 1em 4em;
+	display: block;
+	font-family: terminal, courier, serif, monospaced;
+}
+
+.gbbs h5, .gbbs address {
+	text-transform: capitalize;
+	display: block; font-weight: normal;
+	font-style:italic}.gbbs h5 a:before{content:' :: '}.gbbs h5 a:first-child:before{content:''}label.checked{background:#97d881;font-weight:bold}.right{top:0;right:0;margin:1em;background-color:#ded;border-radius:15px}.right .column{float:left;margin-left:.5em;width:45%}.right img,.right table,.right iframe,.right label,.right object{border:0}.right ol,.right ul{list-style:none;text-indent:0;padding:0;margin:0;overflow:hidden}.right ol{text-transform:capitalize}.right li,.right li a{font-weight:normal;color:#111;text-decoration:none;text-indent:0;margin:1em 0 1em 0}input,textarea{background-color:#fff;border-color:#ddd;opacity:1;width:40em}form#cse-search-box input{width:auto}input[type="button"],input[type="submit"]{background-color:#ded}div#top{position:absolute;left:-9999px}#footer{clear:left}#footerTags a,body>table{margin:1em}h2{background-color:transparent;color:#111;padding:0;margin:1em;border-radius:0}h2 a,h2 a:visited{color:#111}img.gbbs,.gbbs img,.gbbs object{max-width:100%;transition:all 600ms}.gbbs iframe,.gbbs object.youtube{padding:0;width:450px}div.gbbs h6{margin-left:1em}ul{list-style:none;margin:0;padding:0}div.gbbs div.mDate{padding:0;margin:1em}div.gbbs address a,div.gbbs h5 a{font-weight:normal}form{margin:1em}.gbbs .gbbs{position:relative}.gbbs .gbbs.upauly{background:#f9f9f9;border:3px solid #111}.prev,.next{font-weight:normal}.gbbs h5 a.prev:before{content:'<< '}.next:after{content:' >>'}.searchForm small,.searchForm img,#pic h1,.meta,.nickname,.role{display:none}.board3 #pic h1{background-color:#ded;opacity:.6;text-align:center}.board3 #pic{width:230px;height:291px}.family{width:100%;border-collapse:collapse;margin:-1em}.family td{background-color:#ddd;padding:.5em;text-align:center}.stars{list-style:none}
+*/
