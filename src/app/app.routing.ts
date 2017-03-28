@@ -8,8 +8,8 @@ import { PersonDetailComponent } from './people/person-detail/person-detail.comp
 const APP_ROUTES: Routes = [
 	{ path: '', component: TreeComponent },
 	{ path: 'otherTree', component: OtherTreeComponent },
-	{ path: 'people', component: PeopleComponent },
-	{ path: 'people/:id', component: PersonDetailComponent}
+	{ path: 'people/:id/:name', component: PersonDetailComponent},
+	{ path: 'people', component: PeopleComponent }
 ];
 
 export const Routing = RouterModule.forRoot(APP_ROUTES);

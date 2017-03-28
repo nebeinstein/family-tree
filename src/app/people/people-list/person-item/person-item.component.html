@@ -1,11 +1,13 @@
-<a [routerLink]="['/people']" class="list-group-item clearfix">
+<a [routerLink]="['/people', personId, person.name]" class="list-group-item clearfix">
 	<div class="pull-left">
 		<h4 class="list-group-item-heading">{{person.name}}</h4>
-		<p class="list-group-item-text">{{person.description}}</p>
+		<p class="list-group-item-text">{{personId}}</p>
 	</div>
 	<span class="pull-right">
-		<img class="img-responsive"
-			 src="{{person.imagePath}}"
-			 style="max-width: 100px; max-height: 100px"/>
+		<img class = "img-responsive"
+			 src="http://2ndhandcycles.com/themes/theme1/img/nopic.jpg"
+			 width="100"
+			 height="100"
+		>
 	</span>
 </a>

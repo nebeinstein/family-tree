@@ -11,9 +11,8 @@ export class PersonItemComponent implements OnInit {
 	@Input() person: Person;
 	@Input() personId: number;
 
-  constructor() { }
+	constructor() {	}
 
-  ngOnInit() {
-  }
+	ngOnInit() { }
 
 }
