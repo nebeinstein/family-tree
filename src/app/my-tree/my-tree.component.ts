@@ -6,10 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./my-tree.component.css']
 })
 export class MyTreeComponent implements OnInit {
+	parentText = "Parent";
 
-  constructor() { }
+	constructor() { }
 
-  ngOnInit() {
-  }
+	ngOnInit() { }
 
 }
