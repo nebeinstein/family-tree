@@ -15,6 +15,7 @@ import { PersonDetailComponent } from './people/person-detail/person-detail.comp
 import { PeopleService } from './people/people.service';
 
 import { Routing } from './app.routing';
+import { MyTreeComponent } from './my-tree/my-tree.component';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { Routing } from './app.routing';
     PeopleComponent,
     PeopleListComponent,
     PersonItemComponent,
-    PersonDetailComponent
+    PersonDetailComponent,
+    MyTreeComponent
   ],
   imports: [
     BrowserModule,
